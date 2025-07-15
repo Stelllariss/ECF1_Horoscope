@@ -1,4 +1,4 @@
-// Configuration
+// Configuration API
 const CONFIG = {
     API_URL: 'https://oracles-api.sidathsoeun.fr/oracle_api.php',
     API_KEY: 'SI_DART_Sun_api_keys_!598254741369!excalibure!paramKeysOracle!887782secretNum&5882!'
@@ -41,7 +41,7 @@ function setupEventListeners() {
 async function fetchHoroscopes() {
     elements.loading.classList.remove('hidden');
     elements.resultsContainer.innerHTML = '';
-
+    // Méthode POST
     try {
         const response = await fetch(CONFIG.API_URL, {
             method: 'POST',
@@ -83,7 +83,7 @@ function displayHoroscopes(horoscopeData) {
     title.textContent = "Oracle du jour";
     elements.resultsContainer.appendChild(title);
 
-    // Create cards for each zodiac sign
+    // Create "cards" for each zodiac sign
     ZODIAC_SIGNS.forEach(sign => {
         const prediction = horoscopeData[sign.name] || 'Aucune prédiction disponible';
         const card = createZodiacCard(sign, prediction);
@@ -91,7 +91,7 @@ function displayHoroscopes(horoscopeData) {
     });
 }
 
-// Create a zodiac card element
+// Create a "zodiac card" element
 function createZodiacCard(sign, prediction) {
     const card = document.createElement('article');
     card.className = 'zodiac-card';
