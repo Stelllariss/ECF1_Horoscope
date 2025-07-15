@@ -2,7 +2,8 @@
 
 **Application web interactive** affichant les prédictions astrologiques quotidiennes pour les 12 signes du zodiaque.
 
-Github:
+Github:https://github.com/Stelllariss/ECF1_Horoscope
+Site web:https://ecf1-van-uytven-raphael.sidathsoeun.fr
 
 ## ✨ Fonctionnalités
 
