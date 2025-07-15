@@ -1,0 +1,134 @@
+:root {
+    --primary: #6a5acd;
+    --primary-light: #9370db;
+    --background: #f8f5ff;
+    --text: #333;
+    --card-bg: #ffffff;
+    --error: #ff4d4d;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: var(--primary);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.fetch-button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.fetch-button:hover {
+    background-color: #5a4acd;
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+}
+
+.loading.hidden {
+    display: none;
+}
+
+.spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.oracle-title {
+    text-align: center;
+    color: var(--primary);
+    margin: 2rem 0;
+    font-size: 1.8rem;
+}
+
+.zodiac-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 1rem;
+}
+
+.zodiac-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.zodiac-card:hover {
+    transform: translateY(-5px);
+}
+
+.zodiac-header h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.zodiac-content {
+    line-height: 1.6;
+}
+
+.prediction {
+    font-size: 1rem;
+}
+
+.error-message {
+    background-color: #ffeeee;
+    border-left: 4px solid var(--error);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    color: var(--error);
+}
+
+@media (max-width: 768px) {
+    .zodiac-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .oracle-title {
+        font-size: 1.5rem;
+    }
+}
