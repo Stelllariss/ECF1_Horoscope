@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horoscope Complet - Oracle du Jour</title>
+    <meta name="description" content="Découvrez les prédictions astrologiques pour tous les signes du zodiaque">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/horoscope.jpg">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>🌠 Horoscope Universel</h1>
+            <p>Vos prédictions astrologiques quotidiennes</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="controls">
+                <button id="fetch-btn" class="fetch-button">
+                    Obtenir les prédictions du jour
+                </button>
+            </section>
+
+            <section class="results">
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Consultation des astres en cours...</p>
+                </div>
+
+                <div id="horoscope-results" class="zodiac-grid">
+                    <!-- Les prédictions seront insérées ici par JavaScript -->
+                    <div class="placeholder-message">
+                        <p>Cliquez sur le bouton pour afficher les prédictions</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="current-year"></span> Horoscope Universel - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Ajoute l'année courante dans le footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
